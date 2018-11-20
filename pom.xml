@@ -44,6 +44,8 @@
     <properties>
         <epoch.version>1.0</epoch.version>
         <epoch.core.version>1.0</epoch.core.version>
+        <epoch.business.version>1.0</epoch.business.version>
+        <epoch.business.admin.version>1.0</epoch.business.admin.version>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -64,6 +66,14 @@
     <!--依赖-->
     <dependencyManagement>
         <dependencies>
+            <!--项目相关依赖-->
+            <dependency>
+                <groupId>com.github.yll</groupId>
+                <artifactId>yll-epoch-core-configuration</artifactId>
+                <version>${epoch.core.version}</version>
+            </dependency>
+
+            <!--其他依赖-->
             <!-- swagger -->
             <dependency>
                 <groupId>io.springfox</groupId>

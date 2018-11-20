@@ -10,6 +10,15 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>yll-epoch-business</artifactId>
+    <groupId>com.github.yll.business</groupId>
+    <packaging>pom</packaging>
+    <version>${epoch.business.version}</version>
 
+    <name>yll-epoch-business</name>
+    <description>业务模块</description>
 
+    <modules>
+        <!-- business 业务相关模块服务 -->
+        <module>yll-epoch-business-admin</module>
+    </modules>
 </project>
