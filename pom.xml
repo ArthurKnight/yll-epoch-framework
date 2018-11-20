@@ -4,9 +4,117 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.arthurknight</groupId>
+    <groupId>com.github.yll</groupId>
     <artifactId>yll-epoch-framework</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>${epoch.version}</version>
+    <packaging>pom</packaging>
 
+    <!--项目相关-->
+    <name>yll-epoch-framework</name>
+    <url>https://github.com/ArthurKnight/yll-epoch-framework</url>
+    <description>基于springboot + springcloud 全家桶快速构建微服务项目</description>
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <!--开发者-->
+    <developers>
+        <developer>
+            <name>yululiang</name>
+            <email>yululiang666@foxmail.com</email>
+            <roles>
+                <role>Owner</role>
+            </roles>
+            <timezone>+8</timezone>
+            <url>https://www.jianshu.com/u/38d438c7223c</url>
+        </developer>
+    </developers>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.0.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!--属性-->
+    <properties>
+        <epoch.version>1.0</epoch.version>
+        <epoch.core.version>1.0</epoch.core.version>
+
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
+        <swagger2.version>2.9.2</swagger2.version>
+        <mysql.version>5.1.46</mysql.version>
+        <fastjson.version>1.2.47</fastjson.version>
+    </properties>
+
+    <!--项目模块-->
+    <modules>
+        <!-- 基础公共模块 -->
+        <module>yll-epoch-core</module>
+        <module>yll-epoch-business</module>
+    </modules>
+
+    <!--依赖-->
+    <dependencyManagement>
+        <dependencies>
+            <!-- swagger -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger2.version}</version>
+            </dependency>
+
+            <!-- mysql -->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+
+            <!-- fastjson -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!--项目构建-->
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <configuration>
+                        <target>${java.version}</target>
+                        <source>${java.version}</source>
+                        <encoding>UTF-8</encoding>
+                    </configuration>
+                </plugin>
+
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <version>${spring-boot.version}</version>
+                </plugin>
+
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
