@@ -25,7 +25,7 @@ public class PetController {
     @RequestMapping(method = RequestMethod.GET,value="/{id}")
     @ApiOperation(value = "Add a new pet to the store")
     @ApiResponses(value = {@ApiResponse(code = 405, message = "Invalid input")})
-//    @ResponseBody
+    @ResponseBody
     public Pet getPet(
             @PathVariable int id) {
         LOGGER.info("查询某个用户信息");
