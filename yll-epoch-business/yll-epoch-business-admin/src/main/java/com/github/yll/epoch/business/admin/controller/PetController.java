@@ -1,5 +1,6 @@
 package com.github.yll.epoch.business.admin.controller;
 
+import com.github.yll.epoch.business.admin.exception.SelfException;
 import com.github.yll.epoch.business.admin.model.Pet;
 import com.github.yll.epoch.business.admin.model.User;
 import com.github.yll.epoch.business.admin.service.UserService;
@@ -59,7 +60,7 @@ public class PetController {
     @RequestMapping(value = "/foo", method = RequestMethod.GET)
     @ResponseBody
     @ApiOperation(value = "查询")
-    public Result get(Long id, String name) {
+    public Result get(Long id) {
         User user = userService.getUserById(id);
         return Result.createSuccessResult().setData(user);
     }
