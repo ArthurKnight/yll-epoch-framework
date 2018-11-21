@@ -54,6 +54,7 @@
         <swagger2.version>2.9.2</swagger2.version>
         <mysql.version>5.1.46</mysql.version>
         <fastjson.version>1.2.47</fastjson.version>
+        <hikaricp.version>3.1.0</hikaricp.version>
     </properties>
 
     <!--项目模块-->
@@ -103,6 +104,12 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.zaxxer</groupId>
+                <artifactId>HikariCP</artifactId>
+                <version>${hikaricp.version}</version>
             </dependency>
 
 
