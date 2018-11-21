@@ -69,7 +69,7 @@
 
         <dependency>
             <groupId>com.github.yll</groupId>
-            <artifactId>yll-epoch-core-configuration</artifactId>
+            <artifactId>yll-epoch-core-commons</artifactId>
         </dependency>
 
     </dependencies>

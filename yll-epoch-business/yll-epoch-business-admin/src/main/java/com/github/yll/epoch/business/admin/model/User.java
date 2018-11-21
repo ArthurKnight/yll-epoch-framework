@@ -1,30 +1,23 @@
 package com.github.yll.epoch.business.admin.model;
 
-import javax.validation.constraints.NotNull;
-import java.io.Serializable;
 import java.util.StringJoiner;
 
 /**
  * @author luliang_yu
- * @date 2018-11-07
+ * @date 2018-11-21
  */
 
-public class Pet implements Serializable {
+public class User {
 
-    @NotNull(message = "id不能为空")
-    private int id;
+    private Long id;
+
     private String name;
 
-    public Pet(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -36,9 +29,17 @@ public class Pet implements Serializable {
         this.name = name;
     }
 
+    public User(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
+    public User() {
+    }
+
     @Override
     public String toString() {
-        return new StringJoiner(", ", Pet.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
                 .add("id=" + id)
                 .add("name='" + name + "'")
                 .toString();

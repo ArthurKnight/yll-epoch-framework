@@ -16,6 +16,7 @@
     <modules>
         <module>yll-epoch-core-utils</module>
         <module>yll-epoch-core-configuration</module>
+        <module>yll-epoch-core-commons</module>
     </modules>
 
 

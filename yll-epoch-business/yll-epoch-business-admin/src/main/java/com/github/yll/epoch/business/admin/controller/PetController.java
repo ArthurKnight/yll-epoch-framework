@@ -1,13 +1,21 @@
 package com.github.yll.epoch.business.admin.controller;
 
 import com.github.yll.epoch.business.admin.model.Pet;
+import com.github.yll.epoch.business.admin.model.User;
+import com.github.yll.epoch.business.admin.service.UserService;
+import com.github.yll.epoch.core.commons.Result;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.Date;
 
 
 /**
@@ -43,4 +51,18 @@ public class PetController {
         Pet pet = new Pet(1,"小A");
         return pet;
     }
+
+
+    @Autowired
+    UserService userService;
+
+    @RequestMapping(value = "/foo", method = RequestMethod.GET)
+    @ResponseBody
+    @ApiOperation(value = "查询")
+    public Result get(Long id, String name) {
+        User user = userService.getUserById(id);
+        return Result.createSuccessResult().setData(user);
+    }
+
+
 }

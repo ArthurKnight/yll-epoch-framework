@@ -72,6 +72,11 @@
                 <artifactId>yll-epoch-core-configuration</artifactId>
                 <version>${epoch.core.version}</version>
             </dependency>
+            <dependency>
+                <groupId>com.github.yll</groupId>
+                <artifactId>yll-epoch-core-commons</artifactId>
+                <version>${epoch.core.version}</version>
+            </dependency>
 
             <!--其他依赖-->
             <!-- swagger -->
