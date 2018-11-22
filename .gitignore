@@ -1,16 +1,22 @@
-target
+target/
 
-### STS ###
-.apt_generated
+classes/
+
+# Eclipse artifacts, including WTP generated manifests
 .classpath
-.factorypath
 .project
-.settings
-.springBeans
-.sts4-cache
+spring-*/src/main/java/META-INF/MANIFEST.MF
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IDEA artifacts and output dirs
 *.iml
 *.ipr
+*.iws
+.idea
+out
+test-output
+.gradletasknamecache
+
+.settings
+.springBeans
+
+

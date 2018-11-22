@@ -57,6 +57,20 @@
         <hikaricp.version>3.1.0</hikaricp.version>
     </properties>
 
+    <!--项目发布到私服 -->
+    <distributionManagement>
+        <repository>
+            <id>nexus-releases</id>
+            <name>Nexus Release Repository</name>
+            <url>http://192.168.0.107:8081/nexus/content/repositories/releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus-snapshots</id>
+            <name>Nexus Snapshot Repository</name>
+            <url>http://192.168.0.107:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
+
     <!--项目模块-->
     <modules>
         <!-- 基础公共模块 -->
