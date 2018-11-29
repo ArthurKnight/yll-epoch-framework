@@ -42,14 +42,17 @@
 
     <!--属性-->
     <properties>
-        <epoch.version>1.0</epoch.version>
-        <epoch.core.version>1.0</epoch.core.version>
-        <epoch.business.version>1.0</epoch.business.version>
-        <epoch.business.admin.version>1.0</epoch.business.admin.version>
+        <epoch.version>2.0</epoch.version>
+        <epoch.core.version>2.0</epoch.core.version>
+        <epoch.business.version>2.0</epoch.business.version>
+        <epoch.business.admin.version>2.0</epoch.business.admin.version>
 
+        <!--环境-->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
+
+        <!--依赖包版本号-->
         <spring-boot.version>2.1.0.RELEASE</spring-boot.version>
         <swagger2.version>2.9.2</swagger2.version>
         <mysql.version>5.1.46</mysql.version>
@@ -58,7 +61,7 @@
     </properties>
 
     <!--项目发布到私服 -->
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <id>nexus-releases</id>
             <name>Nexus Release Repository</name>
@@ -69,12 +72,13 @@
             <name>Nexus Snapshot Repository</name>
             <url>http://192.168.0.107:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
-    </distributionManagement>
+    </distributionManagement>-->
 
     <!--项目模块-->
     <modules>
         <!-- 基础公共模块 -->
         <module>yll-epoch-core</module>
+        <!--业务模块-->
         <module>yll-epoch-business</module>
     </modules>
 
