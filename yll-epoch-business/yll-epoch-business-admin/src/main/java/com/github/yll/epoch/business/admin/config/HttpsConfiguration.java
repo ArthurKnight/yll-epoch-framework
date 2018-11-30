@@ -27,7 +27,8 @@ public class HttpsConfiguration {
      */
     @Bean
     public ServletWebServerFactory servletContainer() {
-        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory() {
+        TomcatServletWebServerFactory tomcat = new TomcatServletWebServerFactory()/* {
+            //取消自动跳转http
             @Override
             protected void postProcessContext(Context context) {
                 SecurityConstraint securityConstraint = new SecurityConstraint();
@@ -37,7 +38,7 @@ public class HttpsConfiguration {
                 securityConstraint.addCollection(collection);
                 context.addConstraint(securityConstraint);
             }
-        };
+        }*/;
         tomcat.addAdditionalTomcatConnectors(createStandardConnector());
         return tomcat;
     }
