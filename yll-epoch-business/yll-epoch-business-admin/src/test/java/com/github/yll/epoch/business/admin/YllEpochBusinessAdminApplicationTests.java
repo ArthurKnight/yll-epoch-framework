@@ -1,5 +1,6 @@
 package com.github.yll.epoch.business.admin;
 
+import com.github.yll.epoch.core.utils.uuid.UUIDUtils;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -11,6 +12,7 @@ public class YllEpochBusinessAdminApplicationTests {
 
     @Test
     public void contextLoads() {
+        System.out.println(UUIDUtils.getUUID());
     }
 
 }
