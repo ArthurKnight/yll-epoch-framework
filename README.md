@@ -14,18 +14,19 @@
 
 # 技术模块相关说明
 1、 fw-cloud-system 模块
-- fw-cloud-system-eureka  [端口1001] 服务注册中心[在线访问](http://47.106.144.24:1001/)
-- fw-cloud-system-config  [端口1002] 服务配置和发现[远程配置 guide](https://github.com/liuweijw/fw-cloud-framework/wiki/02-%E9%83%A8%E5%88%86%E6%8A%80%E6%9C%AF%E9%85%8D%E7%BD%AE%E8%AF%B4%E6%98%8E)
-- fw-cloud-system-gateway [端口1003] zuul服务网关（外部接口接入入口）
-- fw-cloud-system-auth    [端口1004] 权限接入服务(支持oauth2、单点登录) [查看详情 guide](https://github.com/liuweijw/fw-cloud-framework/wiki/05-Auth-%E6%A8%A1%E5%9D%97%E5%90%AF%E5%8A%A8%E8%AF%B4%E6%98%8E)
+- demo-discovery-eureka  [端口8761] 服务注册与发现(可集群部署)
+- demo-provider-user     [端口8000] 服务提供者
+- demo-consumer-movie    [端口8010] 服务消费者
+- yll-epoch-system-gateway [端口1003] zuul服务网关（外部接口接入入口）
+- yll-epoch-system-auth    [端口1004] 权限接入服务(支持oauth2、单点登录) [查看详情 guide](https://github.com/liuweijw/fw-cloud-framework/wiki/05-Auth-%E6%A8%A1%E5%9D%97%E5%90%AF%E5%8A%A8%E8%AF%B4%E6%98%8E)
 
-2、fw-cloud-core 基础公共模块
-- cloud-commons 抽离底层基础部分依赖 [guide](https://github.com/liuweijw/cloud-commons.git)
-- fw-cloud-core-beans 常用全局bean
-- fw-cloud-core-commons 常量、切面等
-- fw-cloud-core-configuration 基础配置
-- fw-cloud-core-exception Exception定义
-- fw-cloud-core-utils 常用工具类
+2、yll-epoch-core 基础公共模块
+- cloud-commons 抽离底层基础部分依赖
+- yll-epoch-core-beans 常用全局bean
+- yll-epoch-core-commons 常量、切面等
+- yll-epoch-core-configuration 基础配置
+- yll-epoch-core-exception Exception定义
+- yll-epoch-core-utils 常用工具类
 
 # 开发部署环境
 - MySQL
