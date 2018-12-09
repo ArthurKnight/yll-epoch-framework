@@ -1,5 +1,6 @@
 package com.yll.springcloud.democonsumermovie;
 
+import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,8 +62,24 @@ public class MovieController {
     private UserFeignClient userFeignClient;
 
     @GetMapping("/feign/{id}")
+    @HystrixCommand(fallbackMethod = "findByIdCallback")
     public User findByIdFeign(@PathVariable Long id) {
         return userFeignClient.findByIdFeign(id);
+    }
+
+    /**
+     * 当服务不可用，返回默认方法
+     * 注意：执行回退逻辑并不意味着断路器已经打开
+     * @param id
+     * @return
+     */
+    public User findByIdCallback(Long id) {
+        User user = new User();
+        user.setAge(0);
+        user.setId(0L);
+        user.setName("默认用户");
+        user.setUsername("默认用户名");
+        return user;
     }
 }
 
