@@ -13,7 +13,7 @@
 * 前端可以基于element ui 、Vue全家桶、React 等主流，实现前后端分离
 
 # 技术模块相关说明
-1、 fw-cloud-system 模块
+1、spring-cloud 模块 
 - demo-discovery-eureka  [端口8761] 服务注册与发现(可集群部署)
 - demo-provider-user     [端口8000] 服务提供者
 - demo-consumer-movie    [端口8010] 服务消费者
