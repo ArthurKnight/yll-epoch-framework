@@ -64,7 +64,7 @@
         <mysql.version>5.1.46</mysql.version>
         <fastjson.version>1.2.47</fastjson.version>
         <hikaricp.version>3.1.0</hikaricp.version>
-        <spring-cloud.version>Greenwich.M3</spring-cloud.version>
+        <spring-cloud.version>Finchley.SR2</spring-cloud.version>
     </properties>
 
     <!--依赖-->
