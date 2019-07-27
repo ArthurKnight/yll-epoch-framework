@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.github.yll</groupId>
-    <artifactId>yll-epoch-framework</artifactId>
+    <artifactId>spring-cloud</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
 
     <!--项目相关-->
-    <name>yll-epoch-framework</name>
+    <name>yll-spring-cloud-project</name>
     <url>https://github.com/ArthurKnight/yll-epoch-framework</url>
     <description>基于springboot + springcloud 构建微服务项目</description>
     <licenses>
